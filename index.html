@@ -173,7 +173,6 @@
     var totalDays = document.getElementById("totalDays");
 
     var daycount = 0;
-    var rowcount = 0;
     var days = document.getElementsByClassName("days");
 
     for(var i=0; i < days.length; i++){
@@ -192,9 +191,6 @@
             }
         }
     }
-    
-    rowcount++;
-    var completed = new Array(31);
     for (var i=0; i < daycount; i++) {
         var tempString = ""+ (currentMonth + 1) + "-" + (i+1) + "-" + currentYear;
         console.log("storing date:" + tempString);
@@ -220,7 +216,6 @@
         }
     }
     streakElement.innerHTML = "Current Streak: " + streak + " days";
-    console.log("completed arrays:" + completed);
     console.log("total days completed:" + daysCompleted);
     
     for (var i = 0; i < currentDate; i++) {
